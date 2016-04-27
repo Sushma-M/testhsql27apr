@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="projectsList" type="RestService" springFile="projectsList.spring.xml">
+    <operation name="invoke">
+        <parameter name="Cookie" typeRef="java.lang.String" isList="false"/>
+        <return isList="false"/>
+    </operation>
+    <dataobjects>
+        <dataobject javaType="projectsList.RootResponseROOTEntryItem" name="RootResponseROOTEntryItem" supportsQuickData="false">
+            <element name="visibility" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="projectType" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="projectId" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="noOfTeams" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="id" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="projectAppUrl" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="createdByUserId" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="createdAt" typeRef="java.lang.Long" isList="false" allowNull="false"/>
+            <element name="lastModifiedByUserId" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="description" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="name" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="currentUserId" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="permissions" typeRef="projectsList.permissions" isList="false" allowNull="false"/>
+            <element name="role" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="lastModifiedAt" typeRef="java.lang.Long" isList="false" allowNull="false"/>
+            <element name="accessibility" typeRef="java.lang.Boolean" isList="false" allowNull="false"/>
+            <element name="icon" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="status" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="lastAccessedDate" typeRef="java.lang.Long" isList="false" allowNull="false"/>
+            <element name="sampleApp" typeRef="java.lang.Boolean" isList="false" allowNull="false"/>
+            <element name="mappingStatus" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="markedDelete" typeRef="java.lang.Boolean" isList="false" allowNull="false"/>
+            <element name="noOfUsers" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="studioProjectId" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="projectShellId" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="subscriptionState" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="platformType" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="active" typeRef="java.lang.Boolean" isList="false" allowNull="false"/>
+            <element name="displayName" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="projectsList.RootResponse" name="RootResponse" supportsQuickData="false">
+            <element name="RootResponseROOT" typeRef="projectsList.RootResponseROOTEntryItem" isList="true" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="projectsList.permissions" name="permissions" supportsQuickData="false">
+            <element name="export" typeRef="java.lang.Boolean" isList="false" allowNull="false"/>
+            <element name="delete" typeRef="java.lang.Boolean" isList="false" allowNull="false"/>
+            <element name="owner" typeRef="java.lang.Boolean" isList="false" allowNull="false"/>
+            <element name="pushToExternalVcs" typeRef="java.lang.Boolean" isList="false" allowNull="false"/>
+            <element name="deploy" typeRef="java.lang.Boolean" isList="false" allowNull="false"/>
+            <element name="copy" typeRef="java.lang.Boolean" isList="false" allowNull="false"/>
+        </dataobject>
+    </dataobjects>
+</service>

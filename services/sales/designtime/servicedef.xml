@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="sales" type="DataService" springFile="sales.spring.xml">
+    <dataobjects>
+        <dataobject javaType="com.testhsql.sales.Year">
+            <element name="id" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testhsql.sales.VenueDetail">
+            <element name="id" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="manager" typeRef="java.lang.String" allowNull="true"/>
+            <element name="client" typeRef="java.lang.String" allowNull="true"/>
+            <element name="location" typeRef="java.lang.String" allowNull="true"/>
+            <element name="state" typeRef="java.lang.String" allowNull="true"/>
+            <element name="lng" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="lat" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="country" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testhsql.sales.AccountManager">
+            <element name="id" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testhsql.sales.Productcatalog">
+            <element name="unitedHealthCarePlan" typeRef="java.lang.String" allowNull="true"/>
+            <element name="planCode" typeRef="java.lang.String" allowNull="true"/>
+            <element name="productId" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testhsql.sales.Sale">
+            <element name="product" typeRef="java.lang.String" allowNull="true"/>
+            <element name="id" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="client" typeRef="java.lang.String" allowNull="true"/>
+            <element name="year" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="date" typeRef="java.util.Date" allowNull="true"/>
+            <element name="accountManager" typeRef="java.lang.String" allowNull="true"/>
+            <element name="revenue" typeRef="java.lang.Float" allowNull="true"/>
+            <element name="quarter" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testhsql.sales.Client">
+            <element name="id" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.testhsql.sales.ActionItem">
+            <element name="id" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="description" typeRef="java.lang.String" allowNull="true"/>
+            <element name="assignedTo" typeRef="java.lang.String" allowNull="true"/>
+            <element name="owner" typeRef="java.lang.String" allowNull="true"/>
+            <element name="proposalStatus" typeRef="java.lang.String" allowNull="true"/>
+            <element name="actionStatus" typeRef="java.lang.String" allowNull="true"/>
+            <element name="dueDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="createdDate" typeRef="java.util.Date" allowNull="true"/>
+        </dataobject>
+    </dataobjects>
+</service>
